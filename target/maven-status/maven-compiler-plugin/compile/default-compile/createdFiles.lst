@@ -1,0 +1,7 @@
+model\Beverage.class
+util\JsonReader.class
+service\BeverageMaker.class
+model\Machine.class
+MainApplication.class
+model\PreparationStatus.class
+util\BeveragePreparationStatusChecker.class

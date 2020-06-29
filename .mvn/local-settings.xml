@@ -1,0 +1,50 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0">
+    <profiles>
+    <profile>
+        <id>development</id>
+        <repositories>
+            <repository>
+                <id>central</id>
+                <url>https://repo.maven.apache.org/maven2</url>
+                <releases><enabled>true</enabled></releases>
+                <snapshots><enabled>true</enabled></snapshots>
+            </repository>
+        </repositories>
+        <pluginRepositories>
+            <pluginRepository>
+                <id>central</id>
+                <url>https://repo.maven.apache.org/maven2</url>
+                <releases><enabled>true</enabled></releases>
+                <snapshots><enabled>true</enabled></snapshots>
+            </pluginRepository>
+        </pluginRepositories>
+    </profile>
+    <profile>
+        <!--this profile will allow snapshots to be searched when activated-->
+        <id>public-snapshots</id>
+        <repositories>
+            <repository>
+                <id>public-snapshots</id>
+                <url>http://public-snapshots</url>
+                <releases><enabled>false</enabled></releases>
+                <snapshots><enabled>true</enabled></snapshots>
+            </repository>
+        </repositories>
+        <pluginRepositories>
+            <pluginRepository>
+                <id>public-snapshots</id>
+                <url>http://public-snapshots</url>
+                <releases><enabled>false</enabled></releases>
+                <snapshots><enabled>true</enabled></snapshots>
+            </pluginRepository>
+        </pluginRepositories>
+    </profile>
+
+    </profiles>
+
+
+<activeProfiles>
+<activeProfile>development</activeProfile>
+<activeProfile>public-snapshots</activeProfile>
+</activeProfiles>
+</settings>
